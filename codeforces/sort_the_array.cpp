@@ -21,16 +21,14 @@ bool flag = false;
 vector<ll>temp(n);
 temp=nums;
 sort(temp.begin(),temp.end());
-for(int i=1;i<n;i++){
-    if(nums[i] > nums[i-1]){
-        flag = !flag;
-        count++;
+pair<int,int>p;
+for(int i=0;i<n;i++){
+    if(nums[i] != temp[i]){
+        p.first = i;
+    }
+    if(nums[i] == temp[i] && i!=0 && nums[i-1] != temp[i-1]){
+        p.second = i;
     }
 }
-if(count > 2){
-    cout<<"NO"<<endl;
-}
-else{
-    cout<<"YES"<<endl;
-}
+
 }

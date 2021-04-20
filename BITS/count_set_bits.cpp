@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//long method 
 int count(int n){
     int c=0;
     while(n>0){
