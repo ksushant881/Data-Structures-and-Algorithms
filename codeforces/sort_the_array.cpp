@@ -30,5 +30,7 @@ for(int i=0;i<n;i++){
         p.second = i;
     }
 }
-
+for(int i=p.first;i<p.second;i++){
+    if()
+}
 }
