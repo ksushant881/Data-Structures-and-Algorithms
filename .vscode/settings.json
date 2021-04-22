@@ -2,6 +2,11 @@
     "files.associations": {
         "xiosbase": "cpp",
         "iostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "unordered_set": "cpp",
+        "iterator": "cpp",
+        "xhash": "cpp",
+        "xutility": "cpp",
+        "ostream": "cpp"
     }
 }

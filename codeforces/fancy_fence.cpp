@@ -13,11 +13,20 @@ cin >> tc;
 for(int i=0;i<tc;i++){
     int a;
     cin >> a;
-    set<int>st;
-    for(int i=3;i<50;i++){
-        st.insert(((i-2)*180)/i);
+    bool flag=false;
+    for(ll i=3;i<500000;i++){
+        float temp = ((i-2)*180);
+        temp/=i;
+        //cout<<i<<" "<<temp<<endl;
+        if(temp == a){
+            flag = true;
+            break;
+        }
+        else if(temp > a){
+            break;
+        }
     }
-    if(st.count(a))
+    if(flag)
         cout<<"YES"<<endl;
     else
         cout<<"NO"<<endl;
