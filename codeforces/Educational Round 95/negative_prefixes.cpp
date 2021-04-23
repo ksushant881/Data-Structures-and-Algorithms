@@ -33,7 +33,33 @@ vector<pair<int,int>>v(n);
 for(int i=0;i<n;i++){
     cin >> v[i].first;
 }
-cout<<computePre(v,n)<<endl;
- 
+for(int i=0;i<n;i++){
+    cin >> v[i].second;
+}
+
+int k=0;
+
+vector<int>temp;
+for(auto it=v.begin();it!=v.end();it++){
+    if(it->second == 0){
+        temp.push_back(it->first);
+    }
+}
+sort(temp.begin(),temp.end());
+int inx;
+inx = 0;
+for(auto it=v.end()-1;it>=v.begin();it--){
+    if(it->second == 0){
+        it->first = temp[inx];
+        inx++;
+    }
+}
+for(auto it=v.begin();it!=v.end();it++){
+    cout<<it->first<<" ";
+}
+cout<<"\n";
+
+
+
 }
 }

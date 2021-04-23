@@ -7,6 +7,10 @@
         "iterator": "cpp",
         "xhash": "cpp",
         "xutility": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "vector": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp"
     }
 }
