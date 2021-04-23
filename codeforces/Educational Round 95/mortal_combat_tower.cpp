@@ -4,7 +4,11 @@ using namespace std;
 #define ll long long int
 #define mod 1000000007
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
- 
+
+int solve(vector<int>&v,int n,int i,int pts,bool true){
+    if(v[i] == 1)
+}
+
 int main(){
 fastio
  
@@ -18,7 +22,7 @@ for(int casess=0;casess<tc;casess++){
         cin >> v[i];
     }
     int skpPts=0;
-    
+
  
  
 }

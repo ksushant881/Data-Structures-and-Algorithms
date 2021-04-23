@@ -11,6 +11,8 @@
         "vector": "cpp",
         "deque": "cpp",
         "initializer_list": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "ios": "cpp",
+        "tuple": "cpp"
     }
 }
