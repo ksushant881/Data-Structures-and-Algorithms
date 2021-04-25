@@ -36,7 +36,13 @@ if(sumOfDigits(n) > k){
     cout<<"0";
     return 0;
 }
-
+else{
+    int s=sumOfDigits(n);
+    int inc = k - s;
+    while(inc){
+        
+    }
+}
 
 
 }
