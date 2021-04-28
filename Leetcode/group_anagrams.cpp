@@ -22,6 +22,36 @@ using namespace std;
         return res;
     }
 
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<vector<string>>res;
+        vector<string>strs2;
+        strs2=strs;
+        int n=strs.size();
+        for(int j=0;j<n;j++){
+            sort(strs2[j].begin(),strs2[j].end());
+        }
+        for(int i=0;i<n;i++){
+            if(strs2[i]=="0")
+                continue;
+
+            vector<string>temp;
+            temp.push_back(strs[i]);
+            if(i==n-1)
+            {
+                res.push_back(temp);
+                break;
+            }
+            for(int j=i+1;j<n;j++){
+                if(strs2[i]==strs2[j]){
+                    temp.push_back(strs[j]);
+                    strs2[j]="0";
+                }
+            }
+            res.push_back(temp);
+        }
+        return res;
+    }
+
 int main(){
     
 }
