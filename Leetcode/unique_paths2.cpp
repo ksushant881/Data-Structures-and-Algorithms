@@ -24,7 +24,7 @@ using namespace std;
     }
 
     //efficient solution
-        long long int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        long long int uniquePathsWithObstacles2(vector<vector<int>>& obstacleGrid) {
         int m=obstacleGrid.size();
         int n=obstacleGrid[0].size();
         if(n==1 && m==1){
