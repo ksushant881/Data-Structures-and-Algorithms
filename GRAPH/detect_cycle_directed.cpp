@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-bool DFS(vector<int>adj[],int s,int visited[],int recst){
+bool DFS(vector<int>adj[],int s,bool visited[],bool recst[]){
     visited[s]=true;
     recst[s]=true;
     for(int x:adj[s]){
@@ -27,7 +27,7 @@ bool DFSutil(vector<int>adj[],int v){
 
     for(int i=0;i<v;i++){
         if(visited[i]==false){
-            if(DFS(adj,v,i)==true){
+            if(DFS(adj,i,visited,recst)==true){
                 return true;
             }
         }

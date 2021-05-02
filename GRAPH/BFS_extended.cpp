@@ -8,7 +8,7 @@ void BFS(vector<int>ajd[],int v,int s,bool visited[]){
     q.push(s);
     visited[s]=true;
     while(q.empty()==false){
-        int u=q.top();
+        int u=q.front();
         q.pop();
         cout<<u<<" ";
         for(int v:ajd[u]){
@@ -20,7 +20,7 @@ void BFS(vector<int>ajd[],int v,int s,bool visited[]){
 
 void BFSdis(vector<int>adj[],int v){
     bool visited[v];
-     for(int i=0;i<v;;i++)
+     for(int i=0;i<v;i++)
         visited[i]=false;
     for(int i=0;i<v;i++){
         if(visited[i]==false)

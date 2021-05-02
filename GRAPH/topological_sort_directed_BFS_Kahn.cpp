@@ -6,7 +6,7 @@ void addEdge(vector<int>adj[],int v,int u){
     adj[v].push_back(u);
 }
 
-void BFS(vector<int>adj[],bool visited[],int indegree[],int s){
+void BFS(vector<int>adj[],bool visited[],vector<int> indegree,int s){
     queue<int>q;
     for(int i=0;i<indegree.size();i++){
         if(indegree[i]==0){
@@ -34,7 +34,7 @@ void BFSutil(vector<int>adj[],int v){
     }
     //two ways to generate indegree array 1. from adjancecy list 2. from addEdge function
     //watch its a directed graph
-    int indegree[v]={0};
+    vector<int> indegree(v,0);
     for(int i=0;i<v;i++){
         for(int x:adj[i])
             indegree[x]++;
