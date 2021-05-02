@@ -24,7 +24,6 @@ void BFS(vector<int>adj[],bool visited[],vector<int> indegree,int s){
             }
         }
     }
-
 }
 
 void BFSutil(vector<int>adj[],int v){
