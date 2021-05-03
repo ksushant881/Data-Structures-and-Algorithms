@@ -10,6 +10,41 @@ using namespace std;
 // Swap nums[k] and nums[l].
 // Reverse the sub-array nums[k + 1:]
 
+void print(vector<int>v){
+    for(int x:v)
+    cout<<x<<" ";
+    cout<<endl;
+}
+
+//incorrect solution
+void generate(vector<int>nums,int n,int i,vector<vector<int>>&res){
+    if(i==n){
+        res.push_back(nums);
+        return;
+    }
+    for(int j=i;j<n;j++){
+        swap(nums[i],nums[j]);
+        generate(nums,n,i+1,res);
+        swap(nums[i],nums[j]);
+    }
+}
+
+void nextPermutation(vector<int>& v){
+    vector<vector<int>>res;
+    generate(v,v.size(),0,res);
+    sort(res.begin(),res.end());
+    int n=res.size();
+    for(int i=0;i<res.size();i++){
+        if(res[i]==v){
+            while(res[i%n]==v)
+               i=(i+1)%n;
+            v=res[i];
+        break;
+    }
+}
+}
+
+//correct solution
 void nextPermutation(vector<int>& nums) {
     int n=nums.size();
     int i=-1;
@@ -34,12 +69,25 @@ void nextPermutation(vector<int>& nums) {
 }
 
 //1 line solution
-void nextPermutation(vector<int>& nums) {
+void nextPermutation2(vector<int>& nums) {
         next_permutation(begin(nums),end(nums));
     }
 
 int main(){
 fastio
-nextPermutation()
+vector<int>v={1,2,3,7,6};
+// nextPermutation(v);
+// for(int x:v)
+//     cout<<x<<" ";
+nextPermutation(v);
 
 }
+
+/*
+12367
+12376
+12637
+12673
+12736
+12763
+*/
