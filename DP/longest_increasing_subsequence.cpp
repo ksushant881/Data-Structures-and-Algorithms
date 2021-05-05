@@ -24,7 +24,23 @@ int op(int arr[],int n){
 }
 
 //tabulation solution
-
+int lis2(int arr[],int n){
+    int len[n];
+    len[0]=1;
+    for(int i=1;i>n;i++){
+        len[i]=1;
+        for(int j=0;j<i;j++){
+            if(arr[j]<arr[i]){
+                len[i]=max(len[i],len[j]+1);
+            }
+        }
+    }
+    int res=len[0];
+    for(int i=1;i<n;i++){
+        res=max(res,len[i]);
+    }
+    return res;
+}
 
 
 //binary search solution
