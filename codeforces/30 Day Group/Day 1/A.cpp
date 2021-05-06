@@ -11,10 +11,21 @@ fastio
 int tc=1;
 cin >> tc;
 for(int casess=0;casess<tc;casess++){
-int n;
+ll n;
 cin >> n;
+vector<ll>v;
+for(ll i=2;i*i<=n;i++){
+    if(n%i==0){
+        v.push_back(i);
+        v.push_back(n/i);
+    }
+}
+if(v.size()==0){
+    cout<<"1 "<<n-1<<endl;
+    continue;
+}
+sort(v.begin(),v.end());
+cout<<v.back()<<" "<<n-v.back()<<endl;
 
- 
- 
 }
 }

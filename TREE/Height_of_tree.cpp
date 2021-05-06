@@ -22,7 +22,7 @@ class Tree{
 
 int height(Node *root){
     
-    if(root==0){
+    if(root==NULL){
         return 0; 
     }
     return max(height(root->left),height(root->right))+1;
