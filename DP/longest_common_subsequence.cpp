@@ -38,6 +38,5 @@ int main(){
             reverse(x.begin(),x.end());
             cout<<x<<endl;
         }
-            
     }
 }
