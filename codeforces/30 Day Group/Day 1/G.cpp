@@ -25,9 +25,5 @@ for(i=1;i*i<=n;i++){
     }
 }
 cout<<res<<endl;
-
-
- 
- 
 }
 }
