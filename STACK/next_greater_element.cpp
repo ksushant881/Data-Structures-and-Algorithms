@@ -16,8 +16,7 @@ vector<int>next(int arr[],int n){
         }
 
         }
-        st.push(arr[i]);
-        
+        st.push(arr[i]); 
     }
     return res;
 
