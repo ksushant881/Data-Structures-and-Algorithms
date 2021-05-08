@@ -3,6 +3,11 @@
 #include<algorithm>
 using namespace std;
 
+//using substring concept
+bool is_palindrome(std::string str) {
+    return std::equal(str.begin(), str.end(), str.rbegin());
+}
+
 bool pal(string s){
     int n=s.length();
     for(int i=0;i<n/2;i++){
