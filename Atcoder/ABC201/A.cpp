@@ -8,7 +8,15 @@ using namespace std;
 int main(){
 fastio
  
- int r=5;
- int c=4;
-cout<<__LONG_LONG_MAX__;
+int a,b,c;
+cin>>a>>b>>c;
+ll sum=a+b+c;
+if(3*a==sum || 3*b==sum || 3*c==sum)
+{
+    cout<<"Yes"<<"\n";
+}
+else{
+    cout<<"No"<<"\n";
+}
+return 0;
 }

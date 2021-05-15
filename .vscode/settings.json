@@ -13,6 +13,8 @@
         "initializer_list": "cpp",
         "list": "cpp",
         "ios": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "*.tcc": "cpp",
+        "random": "cpp"
     }
 }
