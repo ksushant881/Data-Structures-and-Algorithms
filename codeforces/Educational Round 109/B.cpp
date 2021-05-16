@@ -21,7 +21,7 @@ ll count=0;
 for(ll i=0;i<n;i++){
     if(v[i]==i+1) continue;
     else{
-        ll j=i+1;
+        ll j=i;
         while(v[j]!=i+1){
             j++;
         }
