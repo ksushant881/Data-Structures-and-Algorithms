@@ -15,6 +15,7 @@
         "ios": "cpp",
         "tuple": "cpp",
         "*.tcc": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "new": "cpp"
     }
 }
