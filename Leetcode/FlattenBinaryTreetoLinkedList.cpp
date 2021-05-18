@@ -56,16 +56,59 @@ void print(TreeNode*root){
 class Solution {
 public:
     TreeNode*prev=NULL;
-    void flatten2(TreeNode* root) {
+    void flatten(TreeNode* root) {
         if(root==NULL) return;
-        flatten2(root->right);
-        flatten2(root->left);
+        flatten(root->right);
+        flatten(root->left);
         root->left=NULL;
         root->right=prev;
         prev=root;
     }
 };
 
+//using stack
+class Solution2 {
+public:
+    stack<TreeNode*>st;
+    void preorder(TreeNode*root){
+        if(root!=NULL){
+            st.push(root);
+            preorder(root->left);
+            preorder(root->right);
+        }
+    }
+    void flatten(TreeNode* root) {
+        TreeNode*prev=NULL;
+        while(!st.empty()){
+            TreeNode* curr = st.top();
+            curr->right=prev;
+            curr->left=NULL;
+            prev=curr;
+            st.pop();
+        }
+    }
+};
+
+//O(1) space iterative solution
+class Solution3 {
+public:
+    TreeNode*curr;
+    void flatten(TreeNode* root) {
+        curr=root;
+        while(curr!=NULL){
+            if(curr->left!=NULL){
+                TreeNode*prev=curr->left;
+                while(prev->right){
+                    prev=prev->right;
+                }
+                prev->right=curr->right;
+                curr->right=curr->left;
+                curr->left=NULL;
+            }
+            curr=curr->right;
+        }
+    }
+};
 
 int main(){
     TreeNode *root=new TreeNode('A');
@@ -78,8 +121,8 @@ int main(){
 
     print(root);
     cout<<endl;
-    Solution s;
-    s.flatten2(root);
+    Solution3 s;
+    s.flatten(root);
     print(root);
     cout<<endl;
 
