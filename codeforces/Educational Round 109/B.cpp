@@ -17,19 +17,34 @@ cin>>n;
 vector<ll>v(n);
 for(ll i=0;i<n;i++) cin>>v[i];
 
-ll count=0;
-for(ll i=0;i<n;i++){
-    if(v[i]==i+1) continue;
-    else{
-        ll j=i;
-        while(v[j]!=i+1){
-            j++;
+int count=0;
+if(v[0]==1 || v[n-1]==n){
+    for(int i=0;i<n;i++){
+        if(v[i]==i+1){
+            count++;
         }
-        if(i==0 && j==n-1) j=n-2;
-        sort(v.begin()+i,v.begin()+j+1);
-        count++;
+        else{
+            break;
+        }
+    }
+
+    if(count!=n){
+        cout<<1<<"\n";
+        continue;
+    }
+    else{
+        cout<<0<<"\n";
+        continue;
     }
 }
-cout<<count<<"\n";
+
+else if(v[0]==n && v[n-1]==1){
+    cout<<3<<"\n";
+}
+
+else{
+    cout<<2<<"\n";
+}
+
 }
 }

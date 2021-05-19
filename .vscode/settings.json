@@ -16,6 +16,7 @@
         "tuple": "cpp",
         "*.tcc": "cpp",
         "random": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "cstdlib": "cpp"
     }
 }
