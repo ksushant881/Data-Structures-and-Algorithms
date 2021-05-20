@@ -24,18 +24,27 @@ for(int i=0;i<n;i++){
     if(s[i]=='0') count++;
 }
 
-if(n%2!=0 && count%4==3){
-    cout<<"ALICE"<<"\n";
-    continue;
-}
+// if(n%2!=0 && count%4==3){
+//     cout<<"ALICE"<<"\n";
+//     continue;
+// }
 
-if(count%4==0){
-    cout<<"DRAW"<<"\n";
-    continue;
+// if(count%4==0){
+//     cout<<"DRAW"<<"\n";
+//     continue;
+// }
+// else{
+//     cout<<"BOB"<<"\n";
+//     continue;
+// }
+if(count==1){
+    cout<<"BOB"<<"\n";
+}
+else if(count%2==0){
+    cout<<"BOB"<<endl;
 }
 else{
-    cout<<"BOB"<<"\n";
-    continue;
+    cout<<"ALICE"<<endl;
 }
 
 }
