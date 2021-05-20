@@ -5,8 +5,6 @@ using namespace std;
 #define mod 1000000007
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
  
-
-
 int main(){
 fastio
  
@@ -14,29 +12,18 @@ int tc=1;
 cin >> tc;
 for(int casess=0;casess<tc;casess++){
 
- int n;
+ ll n;
  cin>>n;
-string s;
-cin>>s;
-
+ vector<ll>a(n);
+ for(int i=0;i<n;i++) cin>>a[i];
 int count=0;
-for(int i=0;i<n;i++){
-    if(s[i]=='0') count++;
-}
-
-if(n%2!=0 && count%4==3){
-    cout<<"ALICE"<<"\n";
-    continue;
-}
-
-if(count%4==0){
-    cout<<"DRAW"<<"\n";
-    continue;
-}
-else{
-    cout<<"BOB"<<"\n";
-    continue;
-}
-
+ for(int i=0;i<n-1;i++){
+     for(int j=i+1;j<n;j++){
+         if(a[i]==a[j]){
+             count+=((i+1)*(n-j));
+         }
+     }
+ }
+ cout<<count<<"\n";
 }
 }
