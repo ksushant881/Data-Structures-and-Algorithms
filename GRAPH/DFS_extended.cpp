@@ -1,7 +1,7 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-void DFSrec(vector<int>adj[],int s,bool visited){
+void DFSrec(vector<int>adj[],int s,bool visited[]){
     visited[s]=true;
     cout<<s<<" ";
     for(int x:adj[s]){
@@ -23,3 +23,10 @@ void DFSutil(vector<int>adj[],int v){
             DFSrec(adj,i,visited);
     }
 }
+
+int main(){
+
+
+
+}
+
