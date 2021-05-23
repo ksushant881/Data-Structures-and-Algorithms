@@ -36,7 +36,7 @@ int coin_change3(int arr[],int n,int sum){
         for(int j=1;j<=sum;j++){
             ways[i][j]=ways[i][j-1];
             if(arr[j-1]>=i)
-                ways+=ways[i-arr[]]
+                ways+=ways[i-arr[i]];
         }
     }
 
