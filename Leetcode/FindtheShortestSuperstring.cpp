@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 
-class Solution {
+class Solution2 {
     public:
 
     pair<int,string> help(string s1,string s2,int n1,int n2){
@@ -42,6 +42,18 @@ class Solution {
         auto res=help(s1,s2,n1,n2);
         cout<<res.first<<" "<<res.second;
         return s1;
+    }
+};
+
+class Solution {
+public:
+    string shortestSuperstring(vector<string>& words) {
+        int n=words.size();
+        for(int i=0;i<n-1;i++){
+            for(int j=i+1;j<n;j++){
+                
+            }
+        }
     }
 };
 
