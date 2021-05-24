@@ -18,6 +18,7 @@
         "random": "cpp",
         "new": "cpp",
         "cstdlib": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "valarray": "cpp"
     }
 }
