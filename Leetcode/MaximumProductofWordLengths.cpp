@@ -46,7 +46,8 @@ class Solution{
         int maxProduct(vector<string>& words){
             int n=words.size();
             int res=0;
-            vector<int>mask(n);
+            int mask[n];
+            fill(mask,mask+n,0);
             for(int i=0;i<n;i++){
                 for(auto &ch:words[i]){
                     mask[i] |= 1 << (ch-'a');
