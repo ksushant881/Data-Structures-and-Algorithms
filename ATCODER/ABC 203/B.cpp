@@ -8,11 +8,14 @@ using namespace std;
 int main(){
 fastio
  
-int tc=1;
-cin >> tc;
-for(int casess=0;casess<tc;casess++){
-
- 
- 
+int n,k;
+cin>>n>>k;
+ll sum=0;
+ll rooms=k*(k+1)/2;
+for(int i=1;i<=n;i++){
+    ll floor=i*100*k;
+    sum+=floor+rooms;
 }
+cout<<sum;
+
 }

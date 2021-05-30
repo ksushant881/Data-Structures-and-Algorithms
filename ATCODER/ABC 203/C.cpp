@@ -8,11 +8,21 @@ using namespace std;
 int main(){
 fastio
  
-int tc=1;
-cin >> tc;
-for(int casess=0;casess<tc;casess++){
+ll n,k;
+cin>>n>>k;
+vector<pair<ll,ll>>v;
+for(ll i=0;i<n;i++){
+    ll a,b;
+    cin>>a>>b;
+    v.push_back({a,b});
 
- 
- 
 }
+sort(v.begin(),v.end());
+ll res=k;
+for(ll i=0;i<n;i++){
+    if(v[i].first<=res){
+        res+=v[i].second;
+    }
+}
+cout<<res;
 }

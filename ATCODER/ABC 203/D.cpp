@@ -8,10 +8,13 @@ using namespace std;
 int main(){
 fastio
  
-int a,b,c;
-cin>>a>>b>>c;
-if(a==b) cout<<c;
-else if(c==b) cout<<a;
-else if(a==c) cout<<b;
-else cout<<0;
+int n,k;
+cin>>n>>k;
+vector<vector<ll>>v(n,vector<ll>(n,0));
+for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+        cin>>v[i][j];
+    }
+}
+
 }
