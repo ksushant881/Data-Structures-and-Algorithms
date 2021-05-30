@@ -18,7 +18,7 @@ cin>>s;
 
 
 for(int i=0;i<m;i++){
-    if(i>n*n) break;
+    if(i>2*n) break;
     vector<ll>inx;
     if(s[0]=='0' && n>1 && s[1]=='1'){
         inx.push_back(0);

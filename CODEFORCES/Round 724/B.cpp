@@ -14,9 +14,18 @@ for(int casess=0;casess<tc;casess++){
 int n;
 cin>>n;
 vector<ll>v(n);
-for(int i=0;i>n;i++) cin>>v[i];
+for(int i=0;i<n;i++) cin>>v[i];
 
-
-
+cout<<3*n<<endl;
+for(int i=1;i<=n;i+=2){
+    cout<<"2 "<<i<<" "<<i+1<<endl;
+    cout<<"1 "<<i<<" "<<i+1<<endl;
+    cout<<"2 "<<i<<" "<<i+1<<endl;
+    cout<<"1 "<<i<<" "<<i+1<<endl;
+    cout<<"2 "<<i<<" "<<i+1<<endl;
+    cout<<"1 "<<i<<" "<<i+1<<endl;
+}
+ 
+ 
 }
 }
