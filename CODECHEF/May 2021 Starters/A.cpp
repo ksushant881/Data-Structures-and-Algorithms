@@ -12,7 +12,9 @@ int tc=1;
 cin >> tc;
 for(int casess=0;casess<tc;casess++){
 
- 
+ int x,m,d;
+ cin>>x>>m>>d;
+ cout<<min(x*m,x+d)<<endl;
  
 }
 }
