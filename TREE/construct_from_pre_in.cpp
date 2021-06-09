@@ -25,7 +25,7 @@ node* construct(int pre[],int in[],int is,int ie){
     root->left=construct(pre,in,is,inindex-1);
     root->right=construct(pre,in,inindex+1,ie);
     return root;
-    }
+}
 
 
 void ino(node*root){
