@@ -1,6 +1,4 @@
-for(auto v:res){
-        //     for(auto x:v){
-        //         cout<<x<<" ";
-        //     }
-        //     cout<<endl;
-        // }
+        if(currIndex == stations.size()-1 && currStation+gas < target){
+            res = -1;
+            return;
+        }
