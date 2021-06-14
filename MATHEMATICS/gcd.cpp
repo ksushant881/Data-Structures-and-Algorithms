@@ -17,6 +17,12 @@ int gcd2(int a,int b){
     return a;
 }
 
+//fastest eucliden algorithm
+int gcd3(int a,int b){
+    if(b==0) return a;
+    return gcd(b,a%b);
+}
+
 int main(){
     cout<<gcd(28,14);
 }
