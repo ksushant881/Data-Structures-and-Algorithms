@@ -12,7 +12,7 @@ using namespace std;
  
 
 //recursive solution
-class Solution {
+class Solution1 {
 public:
     void help(TreeNode*root,int target,int curr,vector<int>currentPath,vector<vector<int>>&res){
         if(root==NULL) return;
@@ -37,6 +37,30 @@ public:
         help(root,targetSum,curr,temp,res);
         return res;
     }
+};
+
+//2nd recursive solution
+class Solution{
+public:
+    void help(TreeNode*root,int sum,vector<int>path,vector<vector<int>>&res){
+        if(!root) return;
+        path.push_back(root->val);
+        if(!(root->left) && !(root->right) && sum == root->val){
+            res.push_back(path);
+            return;
+        }
+        help(root->left,sum-(root->val),path,res);
+        help(root->right,sum-(root->val),path,res);
+        path.pop_back();
+    }
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        vector<vector<int>>res;
+        
+        vector<int>path;
+        help(root,targetSum,path,res);
+        return res;
+    }
+
 };
 
 void print(vector<vector<int>>res){
