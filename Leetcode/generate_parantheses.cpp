@@ -30,7 +30,6 @@ using namespace std;
             help(n,m-1,size,s+')');
         if(n>0)
             help(n-1,m,size,s+'(');
-        
     }
     
     

@@ -12,6 +12,8 @@ int tc=1;
 cin >> tc;
 for(int casess=0;casess<tc;casess++){
 
+ string s;
+ cin>>s;
  
  
 }
