@@ -25,6 +25,16 @@ for(int i=0;i<n;i++){
         even++;
     }
 }
+if(odd==0){
+    cout<<"No"<<endl;
+    continue;
+}
 
+int num = x - even;
+if(num%2==0) num++;
+if(num <=min(odd,x))
+cout<<"Yes"<<endl;
+else
+cout<<"No"<<endl;
 }
 }
