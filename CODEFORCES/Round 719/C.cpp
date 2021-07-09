@@ -14,7 +14,7 @@ for(int casess=0;casess<tc;casess++){
 int n;
 cin >> n;
 
- 
- 
+
+
 }
 }

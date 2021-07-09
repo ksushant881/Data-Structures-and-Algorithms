@@ -31,6 +31,8 @@ void fill(vector<ll>&v,ll n){
     }
 }
 
+
+
 int main(){
 fastio
 
@@ -40,14 +42,16 @@ for(int casess=0;casess<tc;casess++){
 ll n;
 cin >> n;
 
-vector<ll>v(n+1,0);
-fill(v,n+1);
-//ll count=0;
-// for(ll i=1;i<=n;i++){
-//     if(ord(i))
-//         count++;
-// }
-// cout<<count<<endl;
-cout<<v[n]<<endl;
+int d,k;
+int res=0;
+for(d=1;d<=9;d++){
+    int num=0;
+    for(k=0;k<=8;k++){
+        num+=d*pow(10,k);
+        if(num <= n) res++;
+    }
+}
+cout<<res<<endl;
 }
 }
+
