@@ -12,6 +12,9 @@
 *.gch
 *.pch
 
+##### Linux
+*~
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
