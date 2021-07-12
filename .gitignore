@@ -1,6 +1,5 @@
 # Prerequisites
 *.d
-*.bin
 
 # Compiled Object files
 *.slo
@@ -11,10 +10,6 @@
 # Precompiled Headers
 *.gch
 *.pch
-
-##### Linux
-*~
-*application/x-sharedlib
 
 # Compiled Dynamic libraries
 *.so
@@ -35,5 +30,3 @@
 *.exe
 *.out
 *.app
-*.prob
-*.class
