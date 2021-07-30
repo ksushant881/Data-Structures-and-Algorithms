@@ -45,27 +45,35 @@ int lis2(int arr[],int n){
 
 //binary search solution
 //good algorithm
-int binS(int arr[],int n,int num){
-    int high=n;
+int binS(vector<int>v,int n,int num){
+    int high=n-1;
     int low=0;
     int mid;
     while(high>low){
-        mid=(high+low)/2;
-        if(arr[mid]>num)
-            high=mid-1;
-
+        mid=low + (high - low)/2;
+        if(v[mid]>=num)
+            high=mid;
         else
-       low=mid+1;
+            low=mid+1;
     }
-    return mid;
+    return high;
 }
 
 int lis3(int arr[],int n){
     vector<int>v;
+    int len=1;
     v.push_back(arr[0]);
-    for(int i=0;i<n;i++){
-        if(arr[i]>v[0])
+    for(int i=1;i<n;i++){
+        if(arr[i]>v[len-1]){
+            v[len]=arr[i];
+            len++;
+        }
+        else{
+            int c=binS(v,len,arr[i]);
+            v[c]=arr[i];
+        }
     }
+    return len;
 }
 
 int main(){

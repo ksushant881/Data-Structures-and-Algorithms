@@ -34,16 +34,16 @@ int diameter1(Node*root){
 }
 
 //second approach n time n space
-void fillMap(map<Node*,int>&mp,Node*root){
-    if(root == NULL){
-        mp[root] = 0;
-    }
-    mp[root] = 1 + max(fill)
-}
-int diameter2(Node*root){
-    map<int,int>mp;
+// void fillMap(map<Node*,int>&mp,Node*root){
+//     if(root == NULL){
+//         mp[root] = 0;
+//     }
+//     mp[root] = 1 + max(fill)
+// }
+// int diameter2(Node*root){
+//     map<int,int>mp;
 
-}
+// }
 
 //third solution
 //n time

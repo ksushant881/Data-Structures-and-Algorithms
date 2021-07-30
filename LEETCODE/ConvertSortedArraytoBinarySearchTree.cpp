@@ -15,14 +15,19 @@ struct TreeNode {
 
 class Solution {
 public:
-    void buildTree(vector<int>nums,int first,int last,TreeNode*root){
-        
+    TreeNode* buildTree(vector<int>nums,int first,int last){
+        if(first>last) return NULL;
+        int i=first+(last-first)/2;
+        int r=nums[(last-first)/2 + first];
+        TreeNode*root = new TreeNode(r);
+        root->left=buildTree(nums,first,i-1);
+        root->right=buildTree(nums,i+1,last);
+        return root;
     }
 
     TreeNode* sortedArrayToBST(vector<int>& nums) {
         int n=nums.size();
-        TreeNode*root=new TreeNode((n-1)/2);
-        root->left = 
+        return buildTree(nums,0,n-1);
     }
 };
 
