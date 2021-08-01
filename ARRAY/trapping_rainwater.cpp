@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int water(int arr[],int n){
@@ -21,14 +21,23 @@ int water(int arr[],int n){
     return water;
 }
 
-int water2(int arr[],int n){
+int water2(vector<int>arr){
+    int n=arr.size();
     int lmax[n];
     int rmax[n];
-    lmax[0]=arr[0];
-    rmax[n-1]=arr[n-1];
+    lmax[0] = arr[0];
+    rmax[n-1] = arr[n-1];
     for(int i=1;i<n;i++){
-        if(arr[i]>lmax)
+        lmax[i] = max(lmax[i-1],arr[i]);
     }
+    for(int i=n-2;i>=0;i--){
+        rmax[i] = max(rmax[i+1],arr[i]);
+    }
+    int water=0;
+    for(int i=1;i<n-1;i++){
+        water += min(rmax[i],lmax[i]) - arr[i];
+    }
+    return water;
 }
 
 int main(){
