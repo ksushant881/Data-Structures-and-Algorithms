@@ -4,19 +4,35 @@ using namespace std;
 #define ll long long int
 #define mod 1000000007
 
-class MapSum {
+struct TrieNode {
+    TrieNode* child[26] = {};
+    int sum = 0; 
+};
+
+class MapSum { 
 public:
-    /** Initialize your data structure here. */
-    MapSum() {
-        
-    }
+    unordered_map<string, int> mp;
+    TrieNode trieRoot;
     
-    void insert(string key, int val) {
-        
+    void insert(const string& key, int val) {
+        int diff = val - mp[key];
+        TrieNode* curr = &trieRoot;
+        for (char c : key) {
+            c -= 'a';
+            if (curr->child[c] == nullptr) curr->child[c] = new TrieNode();
+            curr = curr->child[c];
+            curr->sum += diff;
+        }
+        mp[key] = val;
     }
-    
-    int sum(string prefix) {
-        
+    int sum(const string& prefix) {
+        TrieNode* curr = &trieRoot;
+        for (char c : prefix) {
+            c -= 'a';
+            if (curr->child[c] == nullptr) return 0;
+            curr = curr->child[c];
+        }
+        return curr->sum;
     }
 };
 
