@@ -72,6 +72,41 @@ void print(vector<vector<int>>res){
     }
 }
 
+//using backtracking
+class Solution3 {
+public:
+    vector<vector<int>>res;
+    
+    void solve(TreeNode*root,int targetSum,int currSum,vector<int>&currPath){
+        if(root->left == NULL && root->right == nullptr){
+            if(currSum == targetSum){
+                res.push_back(currPath);
+            }    
+            return;
+        }
+        
+        if(root->left!=NULL){
+            currPath.push_back(root->left->val);
+            solve(root->left,targetSum,currSum+root->left->val,currPath);
+            currPath.pop_back();
+        }
+        
+        if(root->right!=NULL){
+            currPath.push_back(root->right->val);
+            solve(root->right,targetSum,currSum+root->right->val,currPath);
+            currPath.pop_back();
+        }
+    }
+    
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        vector<int>temp;
+        if(root == NULL) return res;
+        temp.push_back(root->val);
+        solve(root,targetSum,root->val,temp);
+        return res;
+    }
+};
+
 int main(){
 
 TreeNode*root=new TreeNode(-2);;
