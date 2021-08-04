@@ -86,3 +86,4 @@ Thumbs.db
 # Unignore all dirs
 !*/
 *.prob
+*.exe
