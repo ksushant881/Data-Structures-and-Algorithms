@@ -17,6 +17,7 @@ public:
             vector<string>temp;
             if(!added[i]){
                 temp.push_back(strs[i]);
+                added[i]=true;
             }
             else{
                 continue;
@@ -25,10 +26,14 @@ public:
                 if(!added[j]){
                     if(freq[i]==freq[j]){
                         temp.push_back(strs[j]);
+                        added[j]=true;
                     }
                 }
             }
             ans.push_back(temp);
+        }
+        if(!added[n-1]){
+            ans.push_back({strs[n-1]});
         }
         return ans;
     }
