@@ -1,16 +1,24 @@
 {
-    "configurations": [
+  "configurations": [
       {
-        "name": "Linux",
-        "includePath": ["${workspaceFolder}/**"],
-        "defines": [],
-        "compilerPath": "/usr/bin/gcc",
-        "cStandard": "c11",
-        "cppStandard": "c++17",
-        "intelliSenseMode": "clang-x64"
+          "name": "Win64",
+          "defines": [
+              "_DEBUG",
+              "UNICODE",
+              "_UNICODE"
+          ],
+          "compilerPath": "C:/MinGW/bin/g++",
+          "cStandard": "c11",
+          "cppStandard": "c++17",
+          "intelliSenseMode": "gcc-x64",
+          "browse": {
+              "path": [
+                  "${workspaceFolder}"
+              ],
+              "limitSymbolsToIncludedHeaders": true,
+              "databaseFilename": ""
+          }
       }
-    ],
-    "version": 4
+  ],
+  "version": 4
   }
-  
-  
