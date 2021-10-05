@@ -20,18 +20,46 @@ f(casess,tc){
 
 string s;
 cin>>s;
-int n=s.length();
+ll givenNumber = stoll(s);
+ll n=s.length();
 if(s.length()%2 != 0){
-    for(int i=0;i<(s.length()+1)/2;i++) cout<<"4";
-    for(int i=0;i<(s.length()+1)/2;i++) cout<<"7";
+    for(ll i=0;i<(s.length()+1)/2;i++) cout<<"4";
+    for(ll i=0;i<(s.length()+1)/2;i++) cout<<"7";
     return 0;
 }
-
+ll ans=INT64_MAX;
 for(int masks=0;masks<(1<<n);masks++){
+    string temp="";
+    for(int i=0;i<n;i++){
+        if(masks & (1<<i)){
+            temp+='4';
+        }
+        else{
+            temp+='7';
+        }
+    }
+    ll cnt=0;
+    for(ll i=0;i<n;i++){
+        if(temp[i] == '4') cnt++;
+        else cnt--;
+    }
+    ll curr = stoll(temp);
     
+    if(cnt != 0 || curr < givenNumber) continue;
+    else{
+        ans = min(ans,curr);
+        // cout<<temp<<endl;
+        // cout<<curr<<" "<<givenNumber<<endl;
+        // cout<<ans<<endl;
+    }
 }
-
-
+if(ans == INT64_MAX){
+    for(ll i=0;i<(s.length())/2+1;i++) cout<<"4";
+    for(ll i=0;i<(s.length())/2+1;i++) cout<<"7";
+}
+else{
+    cout<<ans<<endl;
+}
 
 }
 
