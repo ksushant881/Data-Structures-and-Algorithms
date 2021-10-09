@@ -3,7 +3,6 @@
 using namespace std;
 
 
-//
 void shortest(vector<int>adj[],int v,int s,int dist[]){
     //int dist[v]={INFINITY};
     bool visited[v];
