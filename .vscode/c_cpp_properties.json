@@ -1,24 +1,15 @@
 {
-  "configurations": [
+    "configurations": [
       {
-          "name": "Win64",
-          "defines": [
-              "_DEBUG",
-              "UNICODE",
-              "_UNICODE"
-          ],
-          "compilerPath": "C:/MinGW/bin/g++",
-          "cStandard": "c11",
-          "cppStandard": "c++17",
-          "intelliSenseMode": "gcc-x64",
-          "browse": {
-              "path": [
-                  "${workspaceFolder}"
-              ],
-              "limitSymbolsToIncludedHeaders": true,
-              "databaseFilename": ""
-          }
+        "name": "GCC",
+        "includePath": ["${workspaceFolder}/**"],
+        "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+        "windowsSdkVersion": "10.0.18362.0",
+        "compilerPath": "C:/mingw64/bin/g++.exe",
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "windows-gcc-x64"
       }
-  ],
-  "version": 4
+    ],
+    "version": 4
   }

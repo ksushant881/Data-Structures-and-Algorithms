@@ -3,7 +3,7 @@
       {
         "type": "shell",
         "label": "g++ build active file",
-        "command": "/usr/bin/g++",
+        "command": "C:/mingw64/bin/g++.exe",
         "args": [
           "-g",
           "${file}",
@@ -11,8 +11,29 @@
           "${fileDirname}/${fileBasenameNoExtension}"
         ],
         "options": {
-          "cwd": "/usr/bin"
-        }
+          "cwd": "${fileDirname}"
+        },
+        "detail": "compiler: C:/mingw64/bin/g++.exe"
+      },
+      {
+        "type": "cppbuild",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:/mingw64/bin/g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "C:/mingw64/bin"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: C:/mingw64/bin/g++.exe"
       }
     ],
     "version": "2.0.0"
