@@ -14,18 +14,20 @@ void solve(){
 int main(){
 fastio
 
-int n=1;
-cin >> n;
-vector<int>v(n);
-f(casess,n){
-cin>>v[casess];
-}
-int currMax=0;
-int andd=v[0];
-int xorr=v[0];
-for(int i=1;i<n;i++){
-    
+int tc=1;
+cin >> tc;
+f(casess,tc){
+int n,m,k;
+cin>>n>>m>>k;
+vector<vector<int>>arr(n,vector<int>(m));
+f(i,n){
+    f(j,m){
+        cin>>arr[i][j];
+    }
 }
 
+
+
+}
 
 }
