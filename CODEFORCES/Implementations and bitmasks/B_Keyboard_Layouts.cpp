@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-//https://codeforces.com/problemset/problem/137/A
+
 #define pi 3.1415926536
 #define ll long long int
 #define mod 1000000007
@@ -23,25 +23,25 @@ fastio
 int tc=1;
 // cin >> tc;
 f(casess,tc){
+string a,b;
+cin>>a>>b;
+map<char,char>mp;
+
+f(i,26){
+    mp[a[i]]=b[i];
+    if(a[i] >=97){
+        mp[a[i]-(97-65)]=b[i]-(97-65);
+    }
+    else{
+        mp[a[i]+(97-65)]=b[i]+97-65;
+    }
+}
 string s;
 cin>>s;
-int ans=0;
-int n=s.length();
-for(int i=0;i<n;i++){
-    char curr=s[i];
-    int j=0;
-    while(s[i]==curr){
-        j++;
-        i++;
-        if(j==5) {
-            break;
-        }
-    }
-    ans++;
-    if(j!=0) i--;
+f(i,s.length()){
+    if(mp.count(s[i])) cout<<mp[s[i]];
+    else cout<<s[i];
 }
-cout<<ans<<endl;
-return 0;
 
 
 }

@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-//https://codeforces.com/problemset/problem/137/A
+
 #define pi 3.1415926536
 #define ll long long int
 #define mod 1000000007
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define f(i,n) for(int i=0;i<n;i++)
+#define f(i,n) for(ll i=0;i<n;i++)
 
 //0xAAAAAAAA means 10101010101010101010101010101010 in binary.
 //we get all even bits of n.
@@ -23,26 +23,23 @@ fastio
 int tc=1;
 // cin >> tc;
 f(casess,tc){
-string s;
-cin>>s;
-int ans=0;
-int n=s.length();
-for(int i=0;i<n;i++){
-    char curr=s[i];
-    int j=0;
-    while(s[i]==curr){
-        j++;
-        i++;
-        if(j==5) {
-            break;
-        }
-    }
-    ans++;
-    if(j!=0) i--;
-}
-cout<<ans<<endl;
-return 0;
+ll n;
+cin>>n;
 
+ll div=1;
+f(i,32){
+    if(i==0) continue;
+    
+    ll x = (((1<<i)-1)<<(i-1));
+    if(x>n) {
+        cout<<div<<endl;
+        return 0;
+    }
+    if(n%x == 0){
+        div=x;
+    }
+    
+}
 
 }
 

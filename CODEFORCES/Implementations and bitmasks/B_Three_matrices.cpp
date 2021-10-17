@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-//https://codeforces.com/problemset/problem/137/A
+
 #define pi 3.1415926536
 #define ll long long int
 #define mod 1000000007
@@ -23,25 +23,20 @@ fastio
 int tc=1;
 // cin >> tc;
 f(casess,tc){
-string s;
-cin>>s;
-int ans=0;
-int n=s.length();
+int n;
+cin>>n;
+int arr[n][n];
+f(i,n) f(j,n) arr[i][j];
+vector<vector<float>>a(n,vector<float>(n,0));
+vector<vector<float>>b(n,vector<float>(n,0));
 for(int i=0;i<n;i++){
-    char curr=s[i];
-    int j=0;
-    while(s[i]==curr){
-        j++;
-        i++;
-        if(j==5) {
-            break;
-        }
+    for(int j=0;j<=i;j++){
+        //a[i][j] + b[i][j] = arr[i][j];
+        //a[i][n-j] + b[i][n-j] = arr[i][j];
+        //a[i][j] == a[n-j];
+        //b[i][j] == -b[i][n-j];
     }
-    ans++;
-    if(j!=0) i--;
 }
-cout<<ans<<endl;
-return 0;
 
 
 }
