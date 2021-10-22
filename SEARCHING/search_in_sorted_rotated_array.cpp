@@ -53,7 +53,7 @@ bool search(int arr[],int n,int x){
 }
 
 //efficient approach using binary search only
-//leetcode medium problem
+//atleast one half is always sorted in rotated array
 int search1(int arr[],int n,int x){
     int high=n-1;
     int low=0;

@@ -10,6 +10,7 @@ int peak(int arr[],int n){
         if(arr[i]>arr[i-1] && arr[i]>arr[i+1])
             return arr[i];
     }
+    return 0;
 }
 
 //efficient approach
@@ -27,11 +28,8 @@ int peak2(int arr[],int n){
             high=mid-1;
         else    
             low=mid+1;
-
     }
     return -1;
-
-
 }
 
 int main(){

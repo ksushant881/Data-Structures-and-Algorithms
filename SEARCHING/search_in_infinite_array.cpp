@@ -67,3 +67,15 @@ bool present3(int arr[],int n,int x){
     return binarySearch(arr,i/2+1,i-1,x);
     
 }
+
+int solve(int *arr,int n,int x){
+    if(arr[0]==x) return 0;
+    int i=1;
+    while(arr[i]<=x){
+        i*=2;
+    }
+    return binarySearch(arr,i/2+1,i-1,x);
+}
+int main(){
+
+}

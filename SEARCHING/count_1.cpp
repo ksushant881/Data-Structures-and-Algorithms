@@ -1,14 +1,17 @@
 #include<iostream>
 using namespace std;
 
+//count number of ones in a binary sorted array
 int binary_search(int arr[],int n,int x){
     int high=n-1;
     int low=0;
     int mid;
     while(low<=high){
         mid=(low+high)/2;
-        if(arr[mid]==x)
-            return mid;
+        if(arr[mid]==x){
+            if(mid==0 || arr[mid-1]!=arr[mid]) return mid;
+            else high=mid-1;
+        }
         else if(arr[mid]>x)
             high=mid-1;
         else    
@@ -19,14 +22,7 @@ int binary_search(int arr[],int n,int x){
 
 int ones(int arr[],int n){
     int y=binary_search(arr,n,1);
-    if(y==-1)
-        return -1;
-    else{
-        while(y!=0 && arr[y-1]==1){
-            y--;
-        }
-    }
-    return n-y;
+    return n-1-y+1;
 }
 
 int main(){
