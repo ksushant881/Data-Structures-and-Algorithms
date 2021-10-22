@@ -10,6 +10,7 @@ public:
             if(nums[abs(nums[i])-1] < 0){
                 ans.push_back(abs(nums[i]));
             }
+            nums[abs(nums[i])-1]*=-1;
         }
         return ans;
     }
