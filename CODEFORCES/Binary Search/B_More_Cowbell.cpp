@@ -18,21 +18,48 @@ void solve(){
         high+=arr[i];
         low=max(low,arr[i]);
     }
-
+    sort(arr.begin(),arr.end(),greater<int>());
     int ans = INT_MAX;
+
+    // for(auto x:arr){
+    //     cout<<x<<" ";
+    // }
+    // cout<<endl;
+
     while(high>=low){
         int mid = (high-low)/2 + low;
-        int cnt=1;
-        int s=0;
-        for(int i=0;i<n;i++){
-            s=s+arr[i];
-            if(s>mid){
-                s=arr[i];
-                cnt++;
+        vector<int>boxes(k,0);
+        int i=0;
+        bool flag=true;
+        int j=0;
+        bool flag2=true;
+        for(i=0;i<n;i++){
+            if(j<k && flag2){
+                boxes[j]+=arr[i];
+                if(boxes[j] > mid){
+                    flag=false;
+                    break;
+                }
+                j++;
+            }
+            else{
+                flag2=false;
+                boxes[j-1]+=arr[i];
+                if(boxes[j-1] > mid){
+                    flag=false;
+                    break;
+                }
+                j--;
             }
         }
 
-        if(cnt <= k){
+        // cout<<mid<<endl;
+        // for(auto x:boxes){
+        //     cout<<x<<" ";
+        // }
+        // cout<<endl;
+
+        if(flag){
             ans=mid;
             high=mid-1;
         }
