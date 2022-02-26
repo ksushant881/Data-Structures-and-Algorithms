@@ -10,26 +10,29 @@ public:
             map<int,int>mp;
             for(int x:nums) mp[x]++;
             for(auto x:mp){
-                if(x.second > 1) ans++;;
+                if(x.second > 1) ans++;
             }
             return ans;
         }
         map<int,vector<int>>mp;
         int n=nums.size();
         for(int i=0;i<n;i++){
-            mp[nums[i]%k].push_back(nums[i]);
+            mp[(nums[i]%k+k)%k].push_back(nums[i]);
         }
 
         for(auto x:mp){
             sort(x.second.begin(),x.second.end());
         }
-        
+        set<pair<int,int>>st;
         ll ans=0;
-        for(int i=0;i<k;i++){
-            for(int j=1;j<arr[i].size();j++){
-                if(arr[i][j] == arr[i][j-1] + k) ans++;
+        for(auto x:mp){
+            for(int j=0;j<x.second.size()-1;j++){
+                if(x.second[j+1]-x.second[j] == k) {
+                    st.insert({x.second[j+1],x.second[j]});
+                }
             }
         }
+        ans=st.size();
         return ans;
     }
 };

@@ -7,22 +7,20 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
+    int n;
+    cin>>n;
+    vector<int>arr(n);
+    vector<vector<int>>g(n+1);
+    f(i,n) cin>>arr[i];
+    for(int i=n-1;i>0;i--){
+        
     }
-    
 }
 
 int main(){
 fastio
 int tc=1;
-// cin >> tc;
+cin >> tc;
 f(casess,tc){
    solve();
 }

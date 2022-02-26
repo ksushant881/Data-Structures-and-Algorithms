@@ -7,22 +7,25 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
+    string s,t;
+    cin>>s>>t;
+    int n=s.length(),m=t.length();
+    int k=(n*m)/__gcd(n,m);
+    string str="";
+    while(str.length()!=k) str+=s;
+    string q="";
+    while(q.length()!=k) q+=t;
+    if(str==q){
+        cout<<q<<endl;
+    }else{
+        cout<<-1<<endl;
     }
-    
 }
 
 int main(){
 fastio
 int tc=1;
-// cin >> tc;
+cin >> tc;
 f(casess,tc){
    solve();
 }

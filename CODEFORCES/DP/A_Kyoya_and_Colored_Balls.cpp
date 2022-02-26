@@ -7,15 +7,10 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
-    }
+    int k;
+    cin>>k;
+    int arr[k+1];
+    f(i,k) cin>>arr[i+1];
     
 }
 

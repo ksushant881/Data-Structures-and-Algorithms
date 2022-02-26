@@ -6,16 +6,9 @@ using namespace std;
 #define f(i,n) for(int i=0;i<n;i++)
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
+maximum sum subarray
+
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
-    }
     
 }
 

@@ -1,25 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define pi 3.1415926536
-#define ll long long int
+#define int long long int
 #define mod 1000000007
 #define f(i,n) for(int i=0;i<n;i++)
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
+    int n;
+    cin>>n;
+    if(pow(2,n) > n*n){
+        cout<<"Yes";
     }
-    
+    else{
+        cout<<"No";
+    }
 }
 
-int main(){
+signed main(){
 fastio
 int tc=1;
 // cin >> tc;

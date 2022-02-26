@@ -5,18 +5,29 @@ using namespace std;
 #define mod 1000000007
 #define f(i,n) for(int i=0;i<n;i++)
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+int l,r;
+int cache[101];
+int dp(int n){
+    int len=0;
+    vector<int>arr;
+    while(n){
+        arr.push_back(n%10);
+        n/=10;
+    }
+    len=arr.size();
+    int i=0,j=len-1;
+    while(j>i){
+        
+    }
+}
+
+int F(int n){
+    if(n<10) return n;
+}
 
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
-    }
-    
+    cin>>l>>r;
+    cout<<F(r)-F(l-1);
 }
 
 int main(){

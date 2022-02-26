@@ -6,23 +6,29 @@ using namespace std;
 #define f(i,n) for(int i=0;i<n;i++)
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
+int n;
+// vector<int>arr(300005);
 void solve(){
-    string s;
-    cin>>s;
-    int ans=0;
-    int y=0,n=0,m=0;
-    for(int i=0;i<11;i++){
-        if(s[i]=='o') y++;
-        else if(s[i]=='x') n++;
-        else m++;
+    cin>>n;
+    map<int,int>mp;
+    f(i,n) {
+        int a;
+        cin>>a;
+        // arr[i]=a;
+        mp[a]++;
     }
-    
+
+    for(int i=1;i<=mp.size();i++)cout<<mp.size()<<" ";
+    for(int i=mp.size()+1;i<=n;i++) cout<<i<<" ";
+    cout<<endl;
+
+
 }
 
 int main(){
 fastio
 int tc=1;
-// cin >> tc;
+cin >> tc;
 f(casess,tc){
    solve();
 }
