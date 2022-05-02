@@ -4,44 +4,51 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "java",
-            "name": "Launch a",
-            "request": "launch",
-            "mainClass": "a",
-            "projectName": "GFG_d900f909"
-        },
-        {
-            "name": "(Windows) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "console": "externalTerminal"
-        },
-        {
-          "name": "g++.exe - Build and debug active file",
-          "type": "cppdbg",
-          "request": "launch",
-          "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-          "args": [],
-          "stopAtEntry": false,
-          "cwd": "${fileDirname}",
-          "environment": [],
-          "externalConsole": false,
-          "MIMode": "gdb",
-          "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
-          "setupCommands": [
-            {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-            }
-          ],
-          "preLaunchTask": "C/C++: g++.exe build active file"
-        }
+      {
+        "type": "java",
+        "name": "Launch test",
+        "request": "launch",
+        "mainClass": "CODEFORCES.test",
+        "projectName": "Data-Structures-and-Algorithms_d27d17f8"
+      },
+      {
+        "type": "java",
+        "name": "Launch a",
+        "request": "launch",
+        "mainClass": "a",
+        "projectName": "GFG_d900f909"
+      },
+      {
+        "name": "(Windows) Launch",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "enter program name, for example ${workspaceFolder}/a.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "console": "externalTerminal"
+      },
+      {
+        "name": "g++.exe - Build and debug active file",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "C/C++: g++.exe build active file"
+      }
     ]
 }
