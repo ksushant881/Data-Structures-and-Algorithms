@@ -8,6 +8,13 @@
         "type": "java",
         "name": "Launch test",
         "request": "launch",
+        "mainClass": "test",
+        "projectName": "Data-Structures-and-Algorithms_335481b6"
+      },
+      {
+        "type": "java",
+        "name": "Launch test",
+        "request": "launch",
         "mainClass": "CODEFORCES.test",
         "projectName": "Data-Structures-and-Algorithms_d27d17f8"
       },

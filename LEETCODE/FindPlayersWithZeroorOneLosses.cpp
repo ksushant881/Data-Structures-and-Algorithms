@@ -22,11 +22,18 @@ public:
             if(x.second > 1){
                 st.erase(x.first);
             } else if(x.second == 1){
-                
+                ans[1].push_back(x.first);
+                st.erase(x.first);
             }
         }
-        
-        
+        for(auto x:st){
+            ans[0].push_back(x);
+        }
+        sort(ans[0].begin(),ans[0].end());
+        sort(ans[1].begin(),ans[1].end());
+
+        return ans;
+       
     }
 };
 int main(){
