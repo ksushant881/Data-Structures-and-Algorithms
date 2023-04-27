@@ -2,7 +2,7 @@
     "configurations": [
       {
         "name": "GCC",
-        "includePath": ["${workspaceFolder}/**"],
+        "includePath": ["C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++\\mingw32"],
         "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
         "windowsSdkVersion": "10.0.18362.0",
         "compilerPath": "C:/mingw64/bin/g++.exe",
