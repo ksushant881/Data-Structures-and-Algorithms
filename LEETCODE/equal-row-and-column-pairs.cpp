@@ -51,6 +51,26 @@ public:
     }
 };
 
+class Solution2 {
+public:
+    int equalPairs(vector<vector<int>>& grid) {
+        int ans = 0;
+        map<vector<int>,int>mp;
+        for(auto x:grid){
+            mp[x]++;
+        }
+        int n = grid.size();
+        for(int i=0;i<n;i++){
+            vector<int>v;
+            for(int j=0;j<n;j++){
+                v.push_back(grid[j][i]);
+            }
+            ans+=mp[v];
+        }
+        return ans;
+    }
+};
+
 int main(){
     vector<vector<int>>arr = {{3,2,1},{1,7,6},{2,7,7}};
     Solution s;
