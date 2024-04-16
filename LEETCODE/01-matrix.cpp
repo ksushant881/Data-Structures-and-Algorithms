@@ -25,7 +25,7 @@ public:
         int dx[] = {-1, 1, 0, 0};
         int dy[] = {0, 0, -1, 1};
         vector<pair<int,int>>temp2;
-        for(auto x:temp.){
+        for(auto x:temp){
            
             for(int i=0;i<4;i++){
                 int nr = x.first + dx[i];
