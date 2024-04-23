@@ -22,7 +22,11 @@
         "valarray": "cpp",
         "memory_resource": "cpp",
         "scoped_allocator": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "regex": "cpp",
+        "utility": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
