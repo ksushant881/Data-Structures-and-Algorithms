@@ -6,25 +6,26 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define f(i,n) for(int i=0;i<n;i++)
 
-void convertToTernary(int N){
-    if (N == 0)
-        return;
-    int x = N % 3;
-    N /= 3;
-    if (x < 0)
-        N += 1;
-    convertToTernary(N);
-
-    if (x < 0)
-        cout << x + (3 * -1);
-    else
-        cout << x;
-}
-
 void solve(){
-    for(int i=1;i<50;i++){
-        cout<<i<<" : ";
-        convertToTernary(i);
+    int n;
+    cin>>n;
+    if(n%3==0){
+        for(int i=1;i<=n;i+=3){
+            cout<<i<<" "<<i+2<<" "<<i+1<<" ";
+        }
+        cout<<endl;
+        return;
+    } else if(n%3 == 1) {
+        for(int i=1;i<n;i+=3){
+            cout<<i<<" "<<i+2<<" "<<i+1<<" ";
+        }
+        cout<<n<<endl;
+        return;
+    } else {
+        cout<<5<<" "<<3<<" "<<2<<" "<<4<<" "<<1<<" ";
+        for(int i=6;i<=n;i+=3){
+            cout<<i+2<<" "<<i+1<<" "<<i<<" ";
+        }
         cout<<endl;
     }
 }
